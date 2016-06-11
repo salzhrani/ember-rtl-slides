@@ -8,7 +8,7 @@ Ember.Component.extend({
     name: 'Samy Alzhrani',
     tweets: [
       {
-        body: 'Welcome to the network'
+        body: 'Awesome show!!'
       },
     ],
   },
@@ -24,7 +24,7 @@ Ember.Component.extend({
   hbs: `<div class="outer columns twelve">
       <div style="text-align: center">
         <i class="material-icons mdl-list__item-avatar">person</i>
-        <h4>{{user.name}}</h4>
+        <h4>Ember Global Meetup Comments</h4>
         <ul class="mdl-list">
           {{#each user.tweets as |tweet|}}
           <li class="mdl-list__item mdl-list__item--three-line">
@@ -38,7 +38,7 @@ Ember.Component.extend({
         </ul>
       </div>
 
-  {{textarea class="mdl-textfield__input" value=tempTweet placeholder="New tweet" enter="addTweet" cols="60"}}
+  {{textarea class="mdl-textfield__input" value=tempTweet placeholder="New comment" enter="addTweet" cols="60"}}
 </div>`,
   keyDown(evt){
     if (evt.target.tagName === 'TEXTAREA') {

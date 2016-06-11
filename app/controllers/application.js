@@ -4,6 +4,27 @@ const LEFT = 37;
 const RIGHT = 39;
 const SPACEBAR = 32;
 const { computed } = Ember;
+
+function toggleFullScreen() {
+        if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+          if (document.documentElement.requestFullScreen) {
+            document.documentElement.requestFullScreen();
+          } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen();
+          } else if (document.documentElement.webkitRequestFullScreen) {
+            document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+          }
+        } else {
+          if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+          }
+        }
+      }
+
 export default Ember.Controller.extend({
   slide: 0,
   queryParams: ['slide'],
@@ -36,6 +57,8 @@ export default Ember.Controller.extend({
         this.set('slide', slide - 1);
       } else if ((keyCode === RIGHT || keyCode === SPACEBAR) && slide < this.get('slides').length - 1) {
         this.set('slide', slide + 1);
+      } else if (keyCode === 192) {
+        toggleFullScreen();
       }
     });
   }.on('init'),
