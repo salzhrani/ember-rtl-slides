@@ -1,0 +1,145 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+@import "normalize";
+@import "skeleton";
+body, .slide-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: lato, 'Noto Kufi';
+  background-color: rgb(226, 226, 215);
+}
+.slide-container {
+  display: flex;
+  transition: background .23s;
+  background-size: cover;
+}
+.inner-container {
+  padding-top: 55%;
+  position: relative;
+  margin: auto 0;
+  height: 0;
+  width: 100%;
+}
+.slide {
+  padding: 3vw;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.slide-title {
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  color: #113538;
+  font-size: 4vw;
+}
+.slide-body {
+  font-size: 2.8vw;
+  li {
+    list-style-position: outside;
+  }
+  ul {
+    padding-left: 1em;
+    box-sizing: border-box;
+    list-style-type: disc;
+  }
+}
+.slide-box {
+  width: calc(100% - 300px);
+  height: calc(100% - 300px);
+  background-color: #113538;
+  position: fixed;
+  top: 150px;
+  left: 150px;
+  box-sizing: border-box;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.slide-box h1, .slide-box h2 {
+  text-align: center;
+}
+.slide-box h1 {
+  margin-top: auto;
+}
+.slide-box h2 {
+  margin-bottom: auto;
+}
+
+.fourth-slide {
+  h1 {
+    margin-bottom: auto;
+  }
+  background-color: #113538;
+}
+.fifth-slide, .ninth-slide, .twelfth-slide, .fourteenth-slide {
+  .slide-box {
+    background-color: transparent;
+  }
+  h1 {
+    margin-bottom: auto;
+    text-align: left;
+    font-size: 9vw;
+    color: #391511;
+  }
+  background-image: url('Palace-Courtyard-Meknes-Morocco.jpg')
+}
+.six.columns {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.twelve.columns {
+  img {
+    max-height: 44vh;
+    margin: 0 auto;
+    display: block;
+  }
+}
+.tenth-slide {
+  pre {
+    font-size: 1.6vw;
+    margin: 0 auto;
+  }
+}
+.rtl {
+  text-align: right;
+  direction: rtl;
+  font-family: Noto Kufi Arabic, serif;
+}
+.demo-app {
+  background-color: white;
+  padding:10px;
+  box-sizing: border-box;
+}
+.CodeMirror {
+  font-size: 1.5vw;
+  margin-bottom: 2px;
+  height: 43.5vh;
+}
+.bcontainer {
+  position: relative;
+}
+.number {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+.tab {
+  position: absolute;
+  width:100%;
+  height: 100%;
+}
+.eleventh-slide .row {
+  padding: 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.38);
+  border-radius: 5px;
+}
+#toggle {
+  font-size: 0.7em;
+}

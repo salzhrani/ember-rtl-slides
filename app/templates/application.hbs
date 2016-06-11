@@ -1,1 +1,8 @@
-{{editor-component}}
+
+{{#liquid-bind curSlide as |slide|}}
+<div class="slide-container {{slide}}">
+  <div class="inner-container">
+    {{component slide}}
+  </div>
+</div>
+{{/liquid-bind}}

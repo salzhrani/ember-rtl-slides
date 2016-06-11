@@ -1,0 +1,17 @@
+<div class="slide">
+    <div class="slide-body">
+      <div class="six columns" style="position: relative">
+        <select id="toggle">
+          <option value="js">Javascript</option>
+          <option value="hbs">Handlebars</option>
+        </select>
+        <div class="tab" style={{if showJS '' 'visibility: hidden'}}>
+          {{ivy-codemirror value=js valueUpdated=(action "updateJS") options=(hash mode="javascript")}}
+        </div>
+        <div class="tab" style={{if showJS 'visibility: hidden'}}>
+          {{ivy-codemirror value=hbs valueUpdated=(action "updateHBS") options=(hash mode="handlebars")}}
+        </div>
+      </div>
+      <div class="six columns demo-app">{{editor-component js=js hbs=hbs }}</div>
+    </div>
+</div>

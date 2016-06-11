@@ -26,7 +26,7 @@ function getHbs(code, path = "twiddle/templates/components/dummy-component") {
 }
 
 export default function getHtml(js, hbs, name="twiddle/templates/components") {
-  const ojs = getJs(js, name);
+  const ojs = getJs(js);
   const ohbs = hbs ? getHbs(hbs) : '';
   return `<!DOCTYPE html>
 <html>
@@ -37,14 +37,27 @@ export default function getHtml(js, hbs, name="twiddle/templates/components") {
     <meta name="build-at" content="1465064255190">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
 <style type="text/css">
 #qunit-testrunner-toolbar, #qunit-tests a[href] { display: none; }
+.mdl-list__item {
+  text-align: left;
+}
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
 </style>
   </head>
   <body>
-    <script type="text/javascript">EmberENV = {"FEATURES":{}};</script><script type="text/javascript" src="//assets.ember-twiddle.com/assets/loader.js?v0.8.1"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ember.js/2.5.1/ember.debug.js"></script><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ember-data.js/2.5.2/ember-data.js"></script><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ember.js/2.5.1/ember-template-compiler.js"></script><script type="text/javascript" src="//assets.ember-twiddle.com/assets/twiddle-deps.js?v0.8.1"></script>
+    <script type="text/javascript">EmberENV = {"FEATURES":{}};</script>
+    <script type="text/javascript" src="//assets.ember-twiddle.com/assets/loader.js?v0.8.1"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ember.js/2.5.1/ember.debug.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ember.js/2.5.1/ember-template-compiler.js"></script>
+    <script type="text/javascript" src="//assets.ember-twiddle.com/assets/twiddle-deps.js?v0.8.1"></script>
+    <script type="text/javascript" src="//npmcdn.com/string-direction@0.1.2"></script>
 <script type="text/javascript">define('twiddle/controllers/application', ['exports', 'ember'], function (exports, _ember) {
   'use strict';
 
